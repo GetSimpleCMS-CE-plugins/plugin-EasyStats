@@ -55,9 +55,9 @@ function easyStatsView() {
 	$uniqueVisitors5Minutes = count(array_unique($visitors5Minutes));
 
 	echo '
-	<div style="width:100%;background:#fafafa;border:solid 1px #ddd; padding:15px;margin-bottom:20px;">
+	<div style="width:100%; background:#fafafa; border:solid 1px #ddd; padding:15px; margin-bottom:20px;">
 		<h3>Easy Stats</h3>
-		<b>this plugin shows statistics by counting only unique IP addresses on a website</b>
+		<b>This plugin shows statistics by counting only unique IP addresses on a website.</b>
 	</div>
 
 	<div class="bg-light border p-2"><h2>Stats</h2></div>
