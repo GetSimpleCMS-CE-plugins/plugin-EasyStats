@@ -55,21 +55,27 @@ function easyStatsView() {
 	$uniqueVisitors5Minutes = count(array_unique($visitors5Minutes));
 
 	echo '
-	<div style="width:100%; background:#fafafa; border:solid 1px #ddd; padding:15px; margin-bottom:20px;">
-		<h3>Easy Stats</h3>
-		<b>This plugin shows statistics by counting only unique IP addresses on a website.</b>
+	<style>
+	h2{font-weight:600;}
+	</style>
+	';
+	
+	echo '
+	<div style="width:100%; background:#fafafa; border:solid 1px #ddd; padding:15px; margin-bottom:30px;">
+		<h3>📊 Easy Stats</h3>
+		<p>This plugin shows statistics by counting only unique IP addresses on a website.</p>
 	</div>
 
-	<div class="bg-light border p-2"><h2>Stats</h2></div>
+	<div class="bg-light border p-2"><h2><svg xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle;" width="1.5em" height="1.2em" viewBox="0 0 640 512"><rect width="640" height="512" fill="none"/><path fill="#707070" d="M96 224c35.3 0 64-28.7 64-64s-28.7-64-64-64s-64 28.7-64 64s28.7 64 64 64m448 0c35.3 0 64-28.7 64-64s-28.7-64-64-64s-64 28.7-64 64s28.7 64 64 64m32 32h-64c-17.6 0-33.5 7.1-45.1 18.6c40.3 22.1 68.9 62 75.1 109.4h66c17.7 0 32-14.3 32-32v-32c0-35.3-28.7-64-64-64m-256 0c61.9 0 112-50.1 112-112S381.9 32 320 32S208 82.1 208 144s50.1 112 112 112m76.8 32h-8.3c-20.8 10-43.9 16-68.5 16s-47.6-6-68.5-16h-8.3C179.6 288 128 339.6 128 403.2V432c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48v-28.8c0-63.6-51.6-115.2-115.2-115.2m-223.7-13.4C161.5 263.1 145.6 256 128 256H64c-35.3 0-64 28.7-64 64v32c0 17.7 14.3 32 32 32h65.9c6.3-47.4 34.9-87.3 75.2-109.4"/></svg> Visitors Online</h2></div>
 	';
 
 	echo '
 	<table class="table">
-		<tr><td>Unique users all time: ' . (int)$uniqueAllVisitors	. '</td></tr>
-		<tr><td>Unique users last 30 days: ' . (int)$uniqueVisitors30Days  . '</td></tr>
-		<tr><td>Unique users last 7 days: '  . (int)$uniqueVisitors7Days   . '</td></tr>
-		<tr><td>Unique users last 24 hours: '. (int)$uniqueVisitors24Hours . '</td></tr>
-		<tr><td>Unique users last 5 minutes: '. (int)$uniqueVisitors5Minutes . '</td></tr>
+		<tr><td>Unique visitors all time: <b style="background-color:#A3A4FF;padding:0 3px;border-radius:3px;">' . (int)$uniqueAllVisitors	. '</b></td></tr>
+		<tr><td>Unique visitors last 30 days: <b style="background-color:#79E6A0;padding:0 3px;border-radius:3px;">' . (int)$uniqueVisitors30Days  . '</b></td></tr>
+		<tr><td>Unique visitors last 7 days: <b style="background-color:#FFDB82;padding:0 3px;border-radius:3px;">'  . (int)$uniqueVisitors7Days   . '</b></td></tr>
+		<tr><td>Unique visitors last 24 hours: <b style="background-color:#F9B27D;padding:0 3px;border-radius:3px;">'. (int)$uniqueVisitors24Hours . '</b></td></tr>
+		<tr><td>Unique visitors last 5 minutes: <b style="background-color:#FF90C8;padding:0 3px;border-radius:3px;">'. (int)$uniqueVisitors5Minutes . '</b></td></tr>
 	</table>
 	';
 
@@ -104,7 +110,8 @@ function easyStatsView() {
 	});
 
 	echo '
-	<div class="col-md-12 bg-light border p-2"><h2>Most popular views:</h2></div>
+	<hr style="margin-bottom:30px;">
+	<div class="col-md-12 bg-light border p-2"><h2><svg xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle;"  width="1.2em" height="1.2em" viewBox="0 0 24 24"><rect width="24" height="24" fill="none"/><path fill="#707070" d="M18 20.5a.5.5 0 0 0 .5-.5V10H14a2 2 0 0 1-2-2V3.5H6a.5.5 0 0 0-.5.5v5.25a.75.75 0 0 1-1.5 0V4a2 2 0 0 1 2-2h6.172c.515 0 1.047.22 1.413.586l5.829 5.828A2 2 0 0 1 20 9.828V20a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-3.75a.75.75 0 0 1 1.5 0V20a.5.5 0 0 0 .5.5zm-.622-12L13.5 4.621V8a.5.5 0 0 0 .5.5zM2.75 13h2.505l1.557-3.551a.75.75 0 0 1 1.327-.091l.006.01l.05.103l2.413 6.027l1.427-2.1a.75.75 0 0 1 .545-.389l.01-.002l.107-.007h2a.75.75 0 0 1 .113 1.492l-.01.001l-.103.007h-1.554l-1.979 3.094a.75.75 0 0 1-1.306.04l-.005-.009l-.05-.101l-2.336-5.835l-1.035 2.362a.75.75 0 0 1-.564.439l-.012.002l-.11.008H2.75a.75.75 0 0 1-.113-1.492l.01-.001z"/></svg> Most Popular Pages:</h2></div>
 	<table class="table">
 	';
 	foreach ($pages as $url => $pageData) {
@@ -135,13 +142,27 @@ function easyStatsView() {
 		'Last 5 minutes'
 	  ],
 	  datasets: [{
-		label: 'Unique visitors',
+		label: 'Unique Visitors Online',
 		data: [
 		  " . (int)$uniqueAllVisitors	 . ",
 		  " . (int)$uniqueVisitors30Days  . ",
 		  " . (int)$uniqueVisitors7Days   . ",
 		  " . (int)$uniqueVisitors24Hours . ",
 		  " . (int)$uniqueVisitors5Minutes . "
+		],
+		backgroundColor: [
+		  'rgba(99, 102, 241, 0.7)',
+		  'rgba(34, 197, 94, 0.7)',
+		  'rgba(251, 191, 36, 0.7)',
+		  'rgba(249, 115, 22, 0.7)',
+		  'rgba(236, 72, 153, 0.7)'
+		],
+		borderColor: [
+		  'rgba(99, 102, 241, 1)',
+		  'rgba(34, 197, 94, 1)',
+		  'rgba(251, 191, 36, 1)',
+		  'rgba(249, 115, 22, 1)',
+		  'rgba(236, 72, 153, 1)'
 		],
 		borderWidth: 1
 	  }]
