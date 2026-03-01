@@ -104,10 +104,11 @@ function easyStatsView() {
 		}
 	}
 
-	// Sort pages by visit count descending
+	// Sort pages by visit count descending and limit to top 20
 	uasort($pages, function ($a, $b) {
 		return $b['visits'] <=> $a['visits'];
 	});
+	$pages = array_slice($pages, 0, 20, true);
 
 	echo '
 	<hr style="margin-bottom:30px;">
