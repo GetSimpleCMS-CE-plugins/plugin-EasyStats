@@ -112,7 +112,7 @@ function easyStatsView() {
 		$uniqueCount = (int) count($pageData['unique_visitors']);
 		echo '
 		<tr>
-			<td><b>' . $safeUrl . '</b> – unique views: ' . $uniqueCount . '</td>
+			<td><svg xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle;" width="1.2em" height="1.2em" viewBox="0 0 24 24"><rect width="24" height="24" fill="none"/><path fill="currentColor" d="M4 21V9l8-6l8 6v12h-6v-7h-4v7z"/></svg> <b>' . $safeUrl . '</b> – unique views: ' . $uniqueCount . '</td>
 		</tr>
 		';
 	}
