@@ -240,10 +240,10 @@ function makeEasyStats() {
 	// pagesCount.xml – track per-page unique visitors with file locking
 	$currentUrl = $_SERVER['REQUEST_URI'];
 
-	// Skip tracking search result pages
-	if (strpos($currentUrl, '?search=') !== false || strpos($currentUrl, '?is=') !== false) {
-		return;
-	}
+    // Skip tracking internal GetSimple pages (search results, admin session tokens)
+    if (strpos($currentUrl, '?search=') !== false || strpos($currentUrl, '?is=') !== false) {
+        return;
+    }
 
 	// Sanitise the URL key – store only a safe version
 	$currentUrl = filter_var($currentUrl, FILTER_SANITIZE_URL);
