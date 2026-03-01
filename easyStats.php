@@ -241,7 +241,7 @@ function makeEasyStats() {
 	$currentUrl = $_SERVER['REQUEST_URI'];
 
 	// Skip tracking search result pages
-	if (strpos($currentUrl, '?search=') !== false) {
+	if (strpos($currentUrl, '?search=') !== false || strpos($currentUrl, '?is=') !== false) {
 		return;
 	}
 
